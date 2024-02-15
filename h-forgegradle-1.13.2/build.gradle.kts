@@ -25,6 +25,10 @@ minecraft {
 			workingDirectory(project.file("run"))
 			property("forge.logging.markers", "REGISTRIES")
 		}
+		create("server") {
+			workingDirectory(project.file("run"))
+			property("forge.logging.markers", "REGISTRIES")
+		}
 	}
 }
 
