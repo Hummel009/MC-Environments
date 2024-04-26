@@ -2,22 +2,30 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 plugins {
-	id("fabric-loom") version "1.5-SNAPSHOT"
+	id("net.neoforged.gradle.userdev") version "7.0.105"
 }
 
 group = "com.github.hummel"
 version = LocalDate.now().format(DateTimeFormatter.ofPattern("yy.MM.dd"))
 
 dependencies {
-	minecraft("com.mojang:minecraft:1.20.4")
-	mappings(loom.officialMojangMappings())
-	modImplementation("net.fabricmc:fabric-loader:0.15.7")
-	modImplementation("net.fabricmc.fabric-api:fabric-api:0.96.3+1.20.4")
+	implementation("net.neoforged:neoforge:20.5.5-beta")
 }
 
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+minecraft {
+	runs {
+		create("client") {
+			modSource(project.sourceSets.main.get())
+		}
+		create("server") {
+			modSource(project.sourceSets.main.get())
+		}
 	}
 }
 
