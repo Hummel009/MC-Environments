@@ -24,9 +24,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@main
         with:
-          build-root-directory: ./h-voldeloom-${{matrix.version}}
           cache-disabled: true
       - name: Build with Gradle
+        working-directory: ./h-voldeloom-${{matrix.version}}
         run: ./gradlew build
   build_retrofuturagradle:
     runs-on: windows-latest
@@ -43,9 +43,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@main
         with:
-          build-root-directory: ./h-retrofuturagradle-${{matrix.version}}
           cache-disabled: true
       - name: Build with Gradle
+        working-directory: ./h-retrofuturagradle-${{matrix.version}}
         run: ./gradlew build
   build_forgegradle_legacy:
     runs-on: windows-latest
@@ -62,9 +62,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@main
         with:
-          build-root-directory: ./h-forgegradle-${{matrix.version}}
           cache-disabled: true
       - name: Build with Gradle
+        working-directory: ./h-forgegradle-${{matrix.version}}
         run: ./gradlew build
   build_forgegradle:
     runs-on: windows-latest
@@ -81,9 +81,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@main
         with:
-          build-root-directory: ./h-forgegradle-${{matrix.version}}
           cache-disabled: true
       - name: Build with Gradle
+        working-directory: ./h-forgegradle-${{matrix.version}}
         run: ./gradlew build
   build_fabric:
     runs-on: windows-latest
@@ -100,9 +100,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@main
         with:
-          build-root-directory: ./h-fabric-${{matrix.version}}
           cache-disabled: true
       - name: Build with Gradle
+        working-directory: ./h-fabric-${{matrix.version}}
         run: ./gradlew build
   build_neoforge:
     runs-on: windows-latest
@@ -119,7 +119,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@main
         with:
-          build-root-directory: ./h-neoforge-${{matrix.version}}
           cache-disabled: true
       - name: Build with Gradle
+        working-directory: ./h-neoforge-${{matrix.version}}
         run: ./gradlew build
