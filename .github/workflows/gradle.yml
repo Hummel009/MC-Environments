@@ -25,8 +25,9 @@ jobs:
         uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-voldeloom-${{matrix.version}}
-          arguments: build
           cache-disabled: true
+      - name: Build with Gradle
+        run: ./gradlew build
   build_retrofuturagradle:
     runs-on: windows-latest
     strategy:
@@ -43,8 +44,9 @@ jobs:
         uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-retrofuturagradle-${{matrix.version}}
-          arguments: build
           cache-disabled: true
+      - name: Build with Gradle
+        run: ./gradlew build
   build_forgegradle_legacy:
     runs-on: windows-latest
     strategy:
@@ -61,8 +63,9 @@ jobs:
         uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-forgegradle-${{matrix.version}}
-          arguments: build
           cache-disabled: true
+      - name: Build with Gradle
+        run: ./gradlew build
   build_forgegradle:
     runs-on: windows-latest
     strategy:
@@ -79,8 +82,9 @@ jobs:
         uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-forgegradle-${{matrix.version}}
-          arguments: build
           cache-disabled: true
+      - name: Build with Gradle
+        run: ./gradlew build
   build_fabric:
     runs-on: windows-latest
     strategy:
@@ -97,8 +101,9 @@ jobs:
         uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-fabric-${{matrix.version}}
-          arguments: build
           cache-disabled: true
+      - name: Build with Gradle
+        run: ./gradlew build
   build_neoforge:
     runs-on: windows-latest
     strategy:
@@ -115,5 +120,6 @@ jobs:
         uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-neoforge-${{matrix.version}}
-          arguments: build
           cache-disabled: true
+      - name: Build with Gradle
+        run: ./gradlew build
