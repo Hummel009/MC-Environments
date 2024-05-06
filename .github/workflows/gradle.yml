@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
 jobs:
-  build_voldeloom:
+  build-voldeloom:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -28,7 +28,7 @@ jobs:
       - name: Build with Gradle
         working-directory: ./h-voldeloom-${{matrix.version}}
         run: ./gradlew build
-  build_retrofuturagradle:
+  build-retrofuturagradle:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -47,7 +47,7 @@ jobs:
       - name: Build with Gradle
         working-directory: ./h-retrofuturagradle-${{matrix.version}}
         run: ./gradlew build
-  build_forgegradle_legacy:
+  build-forgegradle-legacy:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -66,7 +66,7 @@ jobs:
       - name: Build with Gradle
         working-directory: ./h-forgegradle-${{matrix.version}}
         run: ./gradlew build
-  build_forgegradle:
+  build-forgegradle:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -85,7 +85,7 @@ jobs:
       - name: Build with Gradle
         working-directory: ./h-forgegradle-${{matrix.version}}
         run: ./gradlew build
-  build_fabric:
+  build-fabric:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -104,7 +104,7 @@ jobs:
       - name: Build with Gradle
         working-directory: ./h-fabric-${{matrix.version}}
         run: ./gradlew build
-  build_neoforge:
+  build-neoforge:
     runs-on: windows-latest
     strategy:
       matrix:
