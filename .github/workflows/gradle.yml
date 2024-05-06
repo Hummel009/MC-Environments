@@ -21,8 +21,8 @@ jobs:
         with:
           java-version: '21'
           distribution: temurin
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@main
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-voldeloom-${{matrix.version}}
           arguments: build
@@ -39,8 +39,8 @@ jobs:
         with:
           java-version: '21'
           distribution: temurin
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@main
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-retrofuturagradle-${{matrix.version}}
           arguments: build
@@ -57,8 +57,8 @@ jobs:
         with:
           java-version: '8'
           distribution: temurin
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@main
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-forgegradle-${{matrix.version}}
           arguments: build
@@ -75,8 +75,8 @@ jobs:
         with:
           java-version: '21'
           distribution: temurin
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@main
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-forgegradle-${{matrix.version}}
           arguments: build
@@ -93,8 +93,8 @@ jobs:
         with:
           java-version: '21'
           distribution: temurin
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@main
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-fabric-${{matrix.version}}
           arguments: build
@@ -111,8 +111,8 @@ jobs:
         with:
           java-version: '21'
           distribution: temurin
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@main
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@main
         with:
           build-root-directory: ./h-neoforge-${{matrix.version}}
           arguments: build
