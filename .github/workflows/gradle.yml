@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
 jobs:
-  build-voldeloom:
+  build-forge-voldeloom:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -26,9 +26,9 @@ jobs:
         with:
           cache-disabled: true
       - name: Build with Gradle
-        working-directory: ./h-voldeloom-${{matrix.version}}
+        working-directory: ./h-forge-${{matrix.version}}
         run: ./gradlew build
-  build-retrofuturagradle:
+  build-forge-retrofuturagradle:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -45,28 +45,28 @@ jobs:
         with:
           cache-disabled: true
       - name: Build with Gradle
-        working-directory: ./h-retrofuturagradle-${{matrix.version}}
+        working-directory: ./h-forge-${{matrix.version}}
         run: ./gradlew build
-  build-forgegradle-legacy:
+  build-forge-essential:
     runs-on: windows-latest
     strategy:
       matrix:
         version: [ '1.8.9', '1.9.4', '1.10.2', '1.11.2' ]
     steps:
       - uses: actions/checkout@main
-      - name: Set up JDK 8
+      - name: Set up JDK 21
         uses: actions/setup-java@main
         with:
-          java-version: '8'
+          java-version: '21'
           distribution: temurin
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@main
         with:
           cache-disabled: true
       - name: Build with Gradle
-        working-directory: ./h-forgegradle-${{matrix.version}}
+        working-directory: ./h-forge-${{matrix.version}}
         run: ./gradlew build
-  build-forgegradle:
+  build-forge-forgegradle:
     runs-on: windows-latest
     strategy:
       matrix:
@@ -83,7 +83,7 @@ jobs:
         with:
           cache-disabled: true
       - name: Build with Gradle
-        working-directory: ./h-forgegradle-${{matrix.version}}
+        working-directory: ./h-forge-${{matrix.version}}
         run: ./gradlew build
   build-fabric:
     runs-on: windows-latest
