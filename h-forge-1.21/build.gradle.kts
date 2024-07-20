@@ -9,7 +9,7 @@ group = "com.github.hummel"
 version = LocalDate.now().format(DateTimeFormatter.ofPattern("yy.MM.dd"))
 
 dependencies {
-	minecraft("net.minecraftforge:forge:1.20.6-50.1.10")
+	minecraft("net.minecraftforge:forge:1.21-51.0.24")
 
 	implementation("net.sf.jopt-simple:jopt-simple:5.0.4") {
 		version {
@@ -25,7 +25,7 @@ java {
 }
 
 minecraft {
-	mappings("official", "1.20.6")
+	mappings("official", "1.21")
 	runs {
 		create("client") {
 			workingDirectory(project.file("runs/client"))
