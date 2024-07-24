@@ -2,7 +2,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 plugins {
-	id("fabric-loom") version "1.7-SNAPSHOT"
+	id("fabric-loom") version "latest.release"
 }
 
 group = "com.github.hummel"
@@ -11,7 +11,7 @@ version = LocalDate.now().format(DateTimeFormatter.ofPattern("yy.MM.dd"))
 dependencies {
 	minecraft("com.mojang:minecraft:1.18.2")
 	mappings(loom.officialMojangMappings())
-	modImplementation("net.fabricmc:fabric-loader:0.15.11")
+	modImplementation("net.fabricmc:fabric-loader:latest.release")
 	modImplementation("net.fabricmc.fabric-api:fabric-api:0.77.0+1.18.2")
 }
 
