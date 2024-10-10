@@ -1,17 +1,18 @@
 pluginManagement {
 	repositories {
-		maven {
-			name = "GTNH Maven"
-			url = uri("http://jenkins.usrv.eu:8081/nexus/content/groups/public/")
-			isAllowInsecureProtocol = true
-			mavenContent {
-				includeGroup("com.gtnewhorizons")
-				includeGroup("com.gtnewhorizons.retrofuturagradle")
-			}
-		}
-		mavenLocal()
 		mavenCentral()
 		gradlePluginPortal()
+		maven("https://maven.architectury.dev/")
+		maven("https://maven.fabricmc.net")
+		maven("https://maven.minecraftforge.net/")
+		maven("https://repo.sk1er.club/repository/maven-releases/")
+	}
+	resolutionStrategy {
+		eachPlugin {
+			when (requested.id.id) {
+				"gg.essential.loom" -> useModule("gg.essential:architectury-loom:${requested.version}")
+			}
+		}
 	}
 }
 

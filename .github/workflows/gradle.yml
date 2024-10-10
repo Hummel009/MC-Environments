@@ -32,7 +32,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        version: [ '1.7.10', '1.12.2' ]
+        version: [ '1.7.10' ]
     steps:
       - uses: actions/checkout@main
       - name: Set up JDK 21
@@ -51,7 +51,7 @@ jobs:
     runs-on: windows-latest
     strategy:
       matrix:
-        version: [ '1.8.9', '1.9.4', '1.10.2', '1.11.2' ]
+        version: [ '1.8.9', '1.9.4', '1.10.2', '1.11.2', '1.12.2' ]
     steps:
       - uses: actions/checkout@main
       - name: Set up JDK 21
